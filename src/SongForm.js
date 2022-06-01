@@ -11,6 +11,13 @@ class SongForm extends React.Component{
         c.preventDefault();
         console.log("submitted")
         console.log('this.state: ', this.state)
+
+        this.props.addSong(this.state)
+    this.setState({
+        name: "",
+        artist: "",
+        album: "", 
+    })
     }
     handleChange = (e) =>{
         if(e.target.name === "artist"){
@@ -39,18 +46,21 @@ class SongForm extends React.Component{
                     placeholder="name placeholder" 
                     name="name" 
                     value={this.state.name} 
+                    onChange={this.handleChange}
                     />
                     <Form.Input 
                     label="Arist" 
                     placeholder="artist placeholder" 
                     name="artist" 
-                    value={this.state.artist} 
+                    value={this.state.artist}
+                    onChange={this.handleChange} 
                     />
                      <Form.Input 
                     label="Album" 
                     placeholder="album placeholder" 
                     name="album" 
                     value={this.state.album} 
+                    onChange={this.handleChange}
                     />
                     <Form.Button>Submit</Form.Button>
                 </Form.Group>
