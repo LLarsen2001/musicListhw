@@ -8,7 +8,7 @@ class SongInfo extends React.Component{
                 <Table.HeaderCell> {this.props.album}</Table.HeaderCell>
                 <Table.HeaderCell> {this.props.artist}</Table.HeaderCell>
                 <Table.Cell width={6}>
-                <Button>Delete</Button>
+                <Button onCllick={()=> this.props.deleteSong(this.props.id)}>Delete</Button>
                 </Table.Cell>
             </Table.Row>
         )

@@ -6,7 +6,8 @@ class MusicList extends React.Component{
     state = {
         songs:[
             {id:1, name:'American Idiot', artist:'GreenDay',album:'American Idiot'},
-            {id:2, name:'Smells like teen spirit', artist:'Nirvana',album:'NeverMind'}
+            {id:2, name:'Smells like teen spirit', artist:'Nirvana',album:'NeverMind'},
+            {id:3, name:'Hello', artist:'jon',album:'The way'},
         ]
     }
     renderSongs=()=>{
@@ -17,10 +18,10 @@ class MusicList extends React.Component{
         <Table celled>
             <Table.Header>
             <Table.Row>
-                <Table.HeaderCell>Song Name</Table.HeaderCell>
-                <Table.HeaderCell>Album Name</Table.HeaderCell>
-                <Table.HeaderCell>Artist Name</Table.HeaderCell>
-                <Table.HeaderCell>Add or Delete</Table.HeaderCell>
+                <Table.HeaderCell>Song</Table.HeaderCell>
+                <Table.HeaderCell>Album</Table.HeaderCell>
+                <Table.HeaderCell>Artist</Table.HeaderCell>
+                <Table.HeaderCell>Delete</Table.HeaderCell>
             </Table.Row>
             </Table.Header>
             <Table.Body>
